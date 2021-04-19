@@ -26,12 +26,12 @@ jobs:
         Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
         copy wallpaper.bmp D:\a\wallpaper.bmp
-        copy Ganti_Wallpaper.bat C:\Users\administrator\Desktop\Ganti_Wallpaper.bat
     - name: Membuat Tunnel.
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp 3389"'
     - name: Connect Ke RDP Kamu CPU 2 Core - 7GB Ram - 255 SSD.
       run: cmd /c start.bat
     - name: Berhasil Dibuat! Anda Bisa Menutup Tab Sekarang.
       run: | 
+        copy Ganti_Wallpaper.bat C:\Users\administrator\Desktop\Ganti_Wallpaper.bat
         Invoke-WebRequest https://raw.githubusercontent.com/pkpropk/pk/main/timeout.ps1 -OutFile loop.ps1
         ./loop.ps1
