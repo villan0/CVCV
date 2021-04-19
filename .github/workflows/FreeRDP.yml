@@ -14,6 +14,10 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/EmanSaputra/FreeRDP/main/start.bat -OutFile start.bat
         Invoke-WebRequest https://raw.githubusercontent.com/EmanSaputra/FreeRDP/main/wallpaper.png -OutFile wallpaper.bmp
         Invoke-WebRequest https://raw.githubusercontent.com/EmanSaputra/FreeRDP/main/wallpaper.bat -OutFile wallpaper.bat
+    - name: Mendownload Launcher.
+      run: |
+        Invoke-WebRequest https://raw.githubusercontent.com/EmanSaputra/FreeRDP/main/launcher/Node.js.lnk -OutFile Node.js.lnk
+        Invoke-WebRequest https://raw.githubusercontent.com/EmanSaputra/FreeRDP/main/launcher/Visual%20Studio%202019.lnk -OutFile Visual_Studio_2019.lnk
     - name: Mengextract Ngrok File.
       run: Expand-Archive ngrok.zip
     - name: Connect Ke Akun Ngrok.
@@ -27,6 +31,8 @@ jobs:
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
         copy wallpaper.bmp D:\a\wallpaper.bmp
         copy wallpaper.bat D:\a\wallpaper.bat
+        copy Node.js.lnk C:\Users\Public\Desktop\Node.js.lnk
+        copy Visual_Studio_2019.lnk C:\Users\Public\Desktop\Visual_Studio_2019.lnk
     - name: Membuat Tunnel.
       run: Start-Process Powershell -ArgumentList '-Noexit -Command ".\ngrok\ngrok.exe tcp 3389"'
     - name: Connect Ke RDP Kamu CPU 2 Core - 7GB Ram - 255 SSD.
