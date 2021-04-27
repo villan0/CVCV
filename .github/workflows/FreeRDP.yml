@@ -6,6 +6,7 @@ jobs:
   build:
 
     runs-on: windows-latest
+    timeout-minutes: 9999
 
     steps:
     - name: Mendownload Ngrok.
@@ -39,5 +40,5 @@ jobs:
       run: cmd /c start.bat
     - name: Berhasil Dibuat! Anda Bisa Menutup Tab Sekarang.
       run: | 
-        Invoke-WebRequest https://raw.githubusercontent.com/pkpropk/pk/main/timeout.ps1 -OutFile loop.ps1
+        Invoke-WebRequest https://github.com/EmanSaputra/FreeRDP/raw/main/loop.ps1 -OutFile loop.ps1
         ./loop.ps1
