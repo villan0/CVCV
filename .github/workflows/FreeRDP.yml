@@ -15,6 +15,7 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/EmanSaputra/FreeRDP/main/start.bat -OutFile start.bat
         Invoke-WebRequest https://raw.githubusercontent.com/EmanSaputra/FreeRDP/main/wallpaper.png -OutFile wallpaper.bmp
         Invoke-WebRequest https://raw.githubusercontent.com/EmanSaputra/FreeRDP/main/wallpaper.bat -OutFile wallpaper.bat
+        Invoke-WebRequest https://raw.githubusercontent.com/EmanSaputra/FreeRDP/main/loop.bat -OutFile loop.bat
     - name: Mendownload Launcher.
       run: |
         Invoke-WebRequest https://raw.githubusercontent.com/EmanSaputra/FreeRDP/main/launcher/Node.js.lnk -OutFile Node.js.lnk
@@ -39,6 +40,4 @@ jobs:
     - name: Connect Ke RDP Kamu CPU 2 Core - 7GB Ram - 255 SSD.
       run: cmd /c start.bat
     - name: Berhasil Dibuat! Anda Bisa Menutup Tab Sekarang.
-      run: | 
-        Invoke-WebRequest https://github.com/EmanSaputra/FreeRDP/raw/main/loop.ps1 -OutFile loop.ps1
-        ./loop.ps1
+      run: cmd /c loop.bat
