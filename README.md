@@ -17,6 +17,7 @@ Buat RDP Windows Ram 7GB 2 Core Cpu Dengan Github:
 
 Kang Recode Script:
 + https://github.com/bangjackcreator/MBAHGADGET
++ https://github.com/AdityaGans2542/AdityaRDP
 
 Preview:
 + [<img img alt="Preview" src="https://raw.githubusercontent.com/EmanSaputra/FreeRDP/main/preview.png"/>](https://github.com/EmanSaputra/FreeRDP)
